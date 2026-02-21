@@ -1,0 +1,8 @@
+# Prueba 01 - Solo altas básicas
+CREAR_HOTEL|H001|Hotel Paraíso|Monterrey|15
+CREAR_HOTEL|H002|Hotel Sol|Cancún|20
+CREAR_HOTEL|H003|Hotel Montaña|San Miguel de Allende|8
+
+CREAR_CLIENTE|c001|Ana García|ana.garcia@email.com
+CREAR_CLIENTE|c002|Luis Pérez|luis.perez@email.com
+CREAR_CLIENTE|c003|María López|maria.lopez@outlook.com

@@ -1,0 +1,19 @@
+# Prueba 03 - Muchos errores de formato y datos inválidos
+
+CREAR_HOTEL|H006|Hotel Buenavista|Guadalajara|   # <- faltan campos
+CREAR_HOTEL|H007|Hotel Estrella||12             # <- ciudad vacía
+CREAR_HOTEL|H008|Hotel Luna|Querétaro|veinte    # <- total_rooms no numérico
+
+CREAR_CLIENTE|c006|Juan|juan.email.com          # <- nombre muy corto?
+CREAR_CLIENTE||Beatriz Torres|bea@correo.com    # <- id vacío
+CREAR_CLIENTE|c007|Elena Vargas|correo invalido # <- email sin @
+
+CREAR_RESERVA|R003|c006|H008|2025-06-01|2025-05-30   # <- check_out < check_in
+CREAR_RESERVA|R004|c999|H008|2025-07-01|2025-07-05   # <- cliente no existe
+RESERVAR_HABITACION|H999                                     # <- hotel no existe
+CANCELAR_RESERVA|R000                                        # <- reserva no existe
+CANCELAR_HABITACION|                                             # <- sin hotel_id
+
+# línea vacía debajo
+
+RESERVAR_HABITACION|H004|extra                                 # <- campo de más

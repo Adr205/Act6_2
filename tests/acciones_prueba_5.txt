@@ -1,0 +1,18 @@
+# Prueba 05 - Casi todo mal (para validar manejo de excepciones)
+
+CREAR_HOTEL|H020|Hotel Prueba|Monterrey|-5           # habitaciones negativas
+CREAR_HOTEL|H021||Torreón|30                         # nombre vacío
+CREAR_HOTEL|H022|Hotel Error|Saltillo|abc            # no número
+
+CREAR_CLIENTE|c020||cliente@sitio.com                 # nombre vacío
+CREAR_CLIENTE|c021|Cliente Mal|mal.email             # email inválido
+CREAR_CLIENTE|c021|Cliente Duplicado|ana@mail.com    # (si ya existe c001 de prueba 1)
+
+CREAR_RESERVA|R020|c020|H020|2025-12-01|              # check_out vacío
+CREAR_RESERVA|R021|c999|H999|ayer|hoy                 # fechas inválidas + ids inexistentes
+
+RESERVAR_HABITACION|
+RESERVAR_HABITACION|   H021                          # espacios extra
+CANCELAR_RESERVA|
+CANCELAR_HABITACION|H777
+CANCELAR_RESERVA|R777
