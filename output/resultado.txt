@@ -1,0 +1,35 @@
+Ejecutando acciones desde: acciones_prueba_2.txt
+--------------------------------------------------
+  [OK] Hotel creado: H004 - Hotel Centro (CDMX)
+  [OK] Hotel creado: H005 - Hotel Playa Azul (Puerto Vallarta)
+  [OK] Cliente creado: c004 - Sofía Ramírez
+  [OK] Cliente creado: c005 - Carlos Mendoza
+  [OK] Reserva creada: R001 (c004 @ H004)
+  [OK] Habitación reservada en H004
+  [OK] Reserva creada: R002 (c005 @ H005)
+  [OK] Habitación reservada en H005
+  [OK] Habitación reservada en H005
+  [OK] Reserva R001 cancelada.
+  [OK] Habitación liberada en H005
+--------------------------------------------------
+
+============================================================
+  RESUMEN AL FINALIZAR - SISTEMA DE HOTELES
+============================================================
+
+--- HOTELES ---
+  • Hotel Centro (CDMX) - Habitaciones:         29/30
+  • Hotel Playa Azul (Puerto Vallarta) - Habitaciones:         38/40
+
+--- CLIENTES ---
+  • c004: Sofía Ramírez <sofia.r@email.com>
+  • c005: Carlos Mendoza <carlos.m@email.com>
+
+--- RESERVAS ---
+  • Reserva R002 - c005 @         H005 (2025-04-05 → 2025-04-08)
+
+============================================================
+  Total: 2 hotel(es) | 2 cliente(s) | 1 reserva(s)
+============================================================
+
+Output guardado en: output/resultado.txt
