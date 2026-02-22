@@ -59,7 +59,7 @@ class TestHotelSystem(unittest.TestCase):
 
     def test_invalid_data_handling(self):
         """Datos inválidos (dict incompleto) no deben romper la ejecución."""
-        bad = {"id": "x", "customer_id": "y"}  # faltan fechas
+        bad = {"id": "x", "customer_id": "y"}  
         with self.assertRaises((KeyError, ValueError, TypeError)):
             Reservation.from_dict(bad)
 
@@ -106,7 +106,6 @@ class TestPrueba02FlujoReserva(unittest.TestCase):
 
     def test_flujo_reserva_y_cancelacion(self):
         state = {"hotels": [], "customers": [], "reservations": []}
-        # H004 30 hab, H005 40 hab
         for hid, name, city, total in [
             ("H004", "Hotel Centro", "CDMX", 30),
             ("H005", "Hotel Playa Azul", "Puerto Vallarta", 40),
@@ -130,13 +129,11 @@ class TestPrueba02FlujoReserva(unittest.TestCase):
         self.assertEqual(state["hotels"][0]["available_rooms"], 29)
         self.assertEqual(state["hotels"][1]["available_rooms"], 38)
 
-        # Cancelar R001 (una hab en H004)
         h4 = Hotel.from_dict(state["hotels"][0])
         h4.cancel_reservation()
         state["hotels"][0]["available_rooms"] = h4.available_rooms
         self.assertEqual(state["hotels"][0]["available_rooms"], 30)
 
-        # Cancelar una habitación en H005
         h5 = Hotel.from_dict(state["hotels"][1])
         h5.cancel_reservation()
         state["hotels"][1]["available_rooms"] = h5.available_rooms
